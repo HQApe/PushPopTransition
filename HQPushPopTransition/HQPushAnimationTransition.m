@@ -108,20 +108,20 @@ const CGFloat JPBaseAnimationTransitionInterlaceFactor = 0.3f;
     self.fromViewController.view.frame = CGRectMake(0, 0, JPScreenW, JPScreenH);
     [self.containerView addSubview:self.fromViewController.view];
     
-    CGRect toViewFrame = CGRectMake(JPScreenW - JPMixShadowViewShadowWidth, 0, JPScreenW + JPMixShadowViewShadowWidth, JPScreenH);
+    CGRect toViewFrame = CGRectMake(0, JPScreenH - JPMixShadowViewShadowWidth, JPScreenW, JPScreenH + JPMixShadowViewShadowWidth);
     self.toShadowView_anim.frame = toViewFrame;
-    self.toViewController.view.frame = CGRectMake(JPMixShadowViewShadowWidth, 0, JPScreenW, JPScreenH);
+    self.toViewController.view.frame = CGRectMake(0, JPMixShadowViewShadowWidth, JPScreenW, JPScreenH);
     [self.toShadowView_anim addSubview:self.toViewController.view];
     [self.containerView addSubview:self.toShadowView_anim];
     
     [UIView animateWithDuration:0.35 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         
         CGRect fromViewFrame = self.fromViewController.view.frame;
-        fromViewFrame.origin.x = -JPBaseAnimationTransitionInterlaceFactor * JPScreenW;
+        fromViewFrame.origin.y = -JPBaseAnimationTransitionInterlaceFactor * JPScreenH;
         self.fromViewController.view.frame = fromViewFrame;
         
         CGRect toViewframe = self.toShadowView_anim.frame;
-        toViewframe.origin.x = -JPMixShadowViewShadowWidth;
+        toViewframe.origin.y = -JPMixShadowViewShadowWidth;
         self.toShadowView_anim.frame = toViewframe;
         
     } completion:^(BOOL finished) {
@@ -157,6 +157,7 @@ const CGFloat JPBaseAnimationTransitionInterlaceFactor = 0.3f;
 - (UIView *)toShadowView_anim{
     if (!_toShadowView_anim) {
         _toShadowView_anim = [UIView new];
+//        _toShadowView_anim.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5];
     }
     return _toShadowView_anim;
 }

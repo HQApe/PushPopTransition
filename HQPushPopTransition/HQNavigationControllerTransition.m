@@ -37,13 +37,14 @@
 
 - (void)gestureDidTriggered:(UIPanGestureRecognizer *)gestureRecognizer
 {
-    CGFloat progress = [gestureRecognizer translationInView:gestureRecognizer.view].x / gestureRecognizer.view.bounds.size.width;
+    CGFloat progress = [gestureRecognizer translationInView:gestureRecognizer.view].y / gestureRecognizer.view.bounds.size.height;
     
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         
         [self.interactivePushTransition updateInteractiveTransition:0];
     }
     else if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
+        
         if (progress <= 0) {
             progress = fabs(progress);
             progress = MIN(1.0, MAX(0.0, progress));

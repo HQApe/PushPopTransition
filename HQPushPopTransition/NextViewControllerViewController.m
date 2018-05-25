@@ -1,55 +1,29 @@
 //
-//  PushViewController.m
+//  NextViewControllerViewController.m
 //  HQPushPopTransition
 //
 //  Created by admin on 2018/5/25.
 //  Copyright © 2018年 admin. All rights reserved.
 //
 
-#import "PushViewController.h"
-
 #import "NextViewControllerViewController.h"
 
-@interface PushViewController ()
+@interface NextViewControllerViewController ()
 
 @end
 
-@implementation PushViewController
+@implementation NextViewControllerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor grayColor];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor purpleColor];
     
     UIButton *popButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
     [popButton setTitle:@"Pop" forState:UIControlStateNormal];
     [popButton addTarget:self action:@selector(popToView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:popButton];
-    
-    UIButton *pushButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 50, 50)];
-    [pushButton setTitle:@"Push" forState:UIControlStateNormal];
-    [pushButton addTarget:self action:@selector(pushToViewController) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:pushButton];
 }
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    self.navigationController.navigationBar.hidden = YES;
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.hidden = NO;
-}
-
-- (void)pushToViewController
-{
-    NextViewControllerViewController *vc = [[NextViewControllerViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
 
 - (void)popToView
 {

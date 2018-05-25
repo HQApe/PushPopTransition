@@ -19,6 +19,7 @@
 		84D3433820B79C5700C36802 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3433720B79C5700C36802 /* PushViewController.m */; };
 		84D3433B20B7A3D700C36802 /* HQNavigationControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3433A20B7A3D700C36802 /* HQNavigationControllerTransition.m */; };
 		84D3433E20B7A90000C36802 /* HQPushAnimationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3433D20B7A90000C36802 /* HQPushAnimationTransition.m */; };
+		84D3434120B7B34900C36802 /* NextViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3434020B7B34900C36802 /* NextViewControllerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		84D3433A20B7A3D700C36802 /* HQNavigationControllerTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQNavigationControllerTransition.m; sourceTree = "<group>"; };
 		84D3433C20B7A90000C36802 /* HQPushAnimationTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQPushAnimationTransition.h; sourceTree = "<group>"; };
 		84D3433D20B7A90000C36802 /* HQPushAnimationTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQPushAnimationTransition.m; sourceTree = "<group>"; };
+		84D3433F20B7B34900C36802 /* NextViewControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewControllerViewController.h; sourceTree = "<group>"; };
+		84D3434020B7B34900C36802 /* NextViewControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewControllerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				84D3433120B79BFE00C36802 /* RootViewController.m */,
 				84D3433620B79C5700C36802 /* PushViewController.h */,
 				84D3433720B79C5700C36802 /* PushViewController.m */,
+				84D3433F20B7B34900C36802 /* NextViewControllerViewController.h */,
+				84D3434020B7B34900C36802 /* NextViewControllerViewController.m */,
 				84D3430420B79BE100C36802 /* Main.storyboard */,
 				84D3430720B79BE100C36802 /* Assets.xcassets */,
 				84D3430920B79BE100C36802 /* LaunchScreen.storyboard */,
@@ -284,6 +289,7 @@
 			files = (
 				84D3433520B79C3000C36802 /* HQNavigationController.m in Sources */,
 				84D3433B20B7A3D700C36802 /* HQNavigationControllerTransition.m in Sources */,
+				84D3434120B7B34900C36802 /* NextViewControllerViewController.m in Sources */,
 				84D3433820B79C5700C36802 /* PushViewController.m in Sources */,
 				84D3433E20B7A90000C36802 /* HQPushAnimationTransition.m in Sources */,
 				84D3430E20B79BE100C36802 /* main.m in Sources */,

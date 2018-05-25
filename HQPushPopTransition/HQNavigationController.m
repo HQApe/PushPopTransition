@@ -56,7 +56,7 @@
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         
         CGPoint translation = [gestureRecognizer velocityInView:gestureRecognizer.view];
-        if (translation.x < 0) {
+        if (translation.y < 0) {
             //右——>左
             UIViewController *viewController = self.viewControllers.lastObject;
             if (!viewController) {
@@ -73,14 +73,13 @@
             //左——>右
         }
     }else if (gestureRecognizer.state == UIGestureRecognizerStateEnded || gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
-        
-        // reset root navigation controller delegate.
-        // if not do this, some unexpected error will happen when tap back button.
         self.delegate = nil;
-        
-        // remove target.
-        [gestureRecognizer removeTarget:self.transition action:@selector(gestureDidTriggered:)];
-        
+        if (gestureRecognizer == self.panGesture) {
+            [gestureRecognizer removeTarget:self.transition action:@selector(gestureDidTriggered:)];
+        }else {
+            SEL popSel = NSSelectorFromString(@"handleNavigationTransition:");
+//            [gestureRecognizer removeTarget:_systemPopTarget action:popSel];
+        }
     }
 }
 
@@ -89,6 +88,17 @@
 - (void)addPushAction:(UIPanGestureRecognizer *)gesture{
     // push action.
     [gesture addTarget:self.transition action:@selector(gestureDidTriggered:)];
+}
+
+#pragma mark - System Pop Gesture Target
+
+- (void)addSystemPopAction:(UIPanGestureRecognizer *)gesture{
+    // handle pop transition animation by system.
+    self.delegate = nil;
+    
+    // System pop action.
+    SEL popSel = NSSelectorFromString(@"handleNavigationTransition:");
+    [gesture addTarget:_systemPopTarget action:popSel];
 }
 
 #pragma mark - UIGestureRecognizerDelegate
@@ -100,7 +110,7 @@
         return NO;
     }
     
-    if (translation.x < 0) {
+    if (translation.y < 0) {
         
         // left slip, means push action.
         
@@ -117,36 +127,36 @@
         // right slip, means pop action.
         
         // Forbid pop when the start point beyond user setted range for pop.
-//        CGPoint beginningLocation = [gestureRecognizer locationInView:gestureRecognizer.view];
-//        if (JPScreenW >= 0 && beginningLocation.x > JPScreenW) {
-//            return NO;
-//        }
-//        else{
-//            // forbid pop when transitioning.
-//            if ([[self valueForKey:@"_isTransitioning"] boolValue]) {
-//                return NO;
-//            }
-//
-//            // forbid pop when current viewController is root viewController.
-//            if (self.viewControllers.count == 1) {
-//                return NO;
-//            }
-//
-//            // ask delegate.
-//            if (self.navigationDelegate && [self.navigationDelegate respondsToSelector:@selector(navigationControllerShouldStartPop:)]) {
-//                if (![self.navigationDelegate navigationControllerShouldStartPop:self]) {
-//                    return NO;
-//                }
-//            }
-//
+        CGPoint beginningLocation = [gestureRecognizer locationInView:gestureRecognizer.view];
+        if (JPScreenW >= 0 && beginningLocation.x > JPScreenW) {
+            return NO;
+        }
+        else{
+            // forbid pop when transitioning.
+            if ([[self valueForKey:@"_isTransitioning"] boolValue]) {
+                return NO;
+            }
+
+            // forbid pop when current viewController is root viewController.
+            if (self.viewControllers.count == 1) {
+                return NO;
+            }
+
+            // ask delegate.
+            if (self.navigationDelegate && [self.navigationDelegate respondsToSelector:@selector(navigationControllerShouldStartPop:)]) {
+                if (![self.navigationDelegate navigationControllerShouldStartPop:self]) {
+                    return NO;
+                }
+            }
+
 //            // not use system pop action.
 //            if (self.useCustomPopAnimationForCurrentViewController) {
 //                return YES;
 //            }
-//
-//            // use system pop action.
+
+            // use system pop action.
 //            [self  addSystemPopAction:gestureRecognizer];
-//        }
+        }
     }
     
     return YES;

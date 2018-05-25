@@ -14,6 +14,7 @@
 @optional
 
 -(void)navigationControllerDidPush:(HQNavigationController *)navigationController;
+-(BOOL)navigationControllerShouldStartPop:(HQNavigationController *)navigationController;
 
 @end
 
