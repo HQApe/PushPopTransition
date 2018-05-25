@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  HQPushPopTransition
 //
 //  Created by admin on 2018/5/25.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface RootViewController : UIViewController
 
 @end
-

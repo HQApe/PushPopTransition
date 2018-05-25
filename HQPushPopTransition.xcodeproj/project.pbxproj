@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		84D3430020B79BE100C36802 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D342FF20B79BE100C36802 /* AppDelegate.m */; };
-		84D3430320B79BE100C36802 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3430220B79BE100C36802 /* ViewController.m */; };
 		84D3430620B79BE100C36802 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D3430420B79BE100C36802 /* Main.storyboard */; };
 		84D3430820B79BE100C36802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D3430720B79BE100C36802 /* Assets.xcassets */; };
 		84D3430B20B79BE100C36802 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D3430920B79BE100C36802 /* LaunchScreen.storyboard */; };
 		84D3430E20B79BE100C36802 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3430D20B79BE100C36802 /* main.m */; };
 		84D3431820B79BE100C36802 /* HQPushPopTransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3431720B79BE100C36802 /* HQPushPopTransitionTests.m */; };
 		84D3432320B79BE100C36802 /* HQPushPopTransitionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3432220B79BE100C36802 /* HQPushPopTransitionUITests.m */; };
+		84D3433220B79BFE00C36802 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3433120B79BFE00C36802 /* RootViewController.m */; };
+		84D3433520B79C3000C36802 /* HQNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3433420B79C3000C36802 /* HQNavigationController.m */; };
+		84D3433820B79C5700C36802 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3433720B79C5700C36802 /* PushViewController.m */; };
+		84D3433B20B7A3D700C36802 /* HQNavigationControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3433A20B7A3D700C36802 /* HQNavigationControllerTransition.m */; };
+		84D3433E20B7A90000C36802 /* HQPushAnimationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3433D20B7A90000C36802 /* HQPushAnimationTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +42,6 @@
 		84D342FB20B79BE100C36802 /* HQPushPopTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HQPushPopTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D342FE20B79BE100C36802 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84D342FF20B79BE100C36802 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		84D3430120B79BE100C36802 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		84D3430220B79BE100C36802 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		84D3430520B79BE100C36802 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84D3430720B79BE100C36802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D3430A20B79BE100C36802 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,16 @@
 		84D3431E20B79BE100C36802 /* HQPushPopTransitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HQPushPopTransitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D3432220B79BE100C36802 /* HQPushPopTransitionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQPushPopTransitionUITests.m; sourceTree = "<group>"; };
 		84D3432420B79BE100C36802 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D3433020B79BFE00C36802 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		84D3433120B79BFE00C36802 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		84D3433320B79C3000C36802 /* HQNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQNavigationController.h; sourceTree = "<group>"; };
+		84D3433420B79C3000C36802 /* HQNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQNavigationController.m; sourceTree = "<group>"; };
+		84D3433620B79C5700C36802 /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		84D3433720B79C5700C36802 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
+		84D3433920B7A3D700C36802 /* HQNavigationControllerTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQNavigationControllerTransition.h; sourceTree = "<group>"; };
+		84D3433A20B7A3D700C36802 /* HQNavigationControllerTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQNavigationControllerTransition.m; sourceTree = "<group>"; };
+		84D3433C20B7A90000C36802 /* HQPushAnimationTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQPushAnimationTransition.h; sourceTree = "<group>"; };
+		84D3433D20B7A90000C36802 /* HQPushAnimationTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQPushAnimationTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +115,16 @@
 			children = (
 				84D342FE20B79BE100C36802 /* AppDelegate.h */,
 				84D342FF20B79BE100C36802 /* AppDelegate.m */,
-				84D3430120B79BE100C36802 /* ViewController.h */,
-				84D3430220B79BE100C36802 /* ViewController.m */,
+				84D3433C20B7A90000C36802 /* HQPushAnimationTransition.h */,
+				84D3433D20B7A90000C36802 /* HQPushAnimationTransition.m */,
+				84D3433920B7A3D700C36802 /* HQNavigationControllerTransition.h */,
+				84D3433A20B7A3D700C36802 /* HQNavigationControllerTransition.m */,
+				84D3433320B79C3000C36802 /* HQNavigationController.h */,
+				84D3433420B79C3000C36802 /* HQNavigationController.m */,
+				84D3433020B79BFE00C36802 /* RootViewController.h */,
+				84D3433120B79BFE00C36802 /* RootViewController.m */,
+				84D3433620B79C5700C36802 /* PushViewController.h */,
+				84D3433720B79C5700C36802 /* PushViewController.m */,
 				84D3430420B79BE100C36802 /* Main.storyboard */,
 				84D3430720B79BE100C36802 /* Assets.xcassets */,
 				84D3430920B79BE100C36802 /* LaunchScreen.storyboard */,
@@ -262,8 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84D3430320B79BE100C36802 /* ViewController.m in Sources */,
+				84D3433520B79C3000C36802 /* HQNavigationController.m in Sources */,
+				84D3433B20B7A3D700C36802 /* HQNavigationControllerTransition.m in Sources */,
+				84D3433820B79C5700C36802 /* PushViewController.m in Sources */,
+				84D3433E20B7A90000C36802 /* HQPushAnimationTransition.m in Sources */,
 				84D3430E20B79BE100C36802 /* main.m in Sources */,
+				84D3433220B79BFE00C36802 /* RootViewController.m in Sources */,
 				84D3430020B79BE100C36802 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
