@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8401DE7E20D8F536002B7E87 /* MyFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401DE7D20D8F536002B7E87 /* MyFirstViewController.m */; };
+		8401DE8120D8F541002B7E87 /* MySecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401DE8020D8F541002B7E87 /* MySecondViewController.m */; };
+		8401DE8420D8F54F002B7E87 /* MythirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401DE8320D8F54F002B7E87 /* MythirdViewController.m */; };
+		8401DE8720D8FC0C002B7E87 /* UIViewController+CustomTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401DE8620D8FC0C002B7E87 /* UIViewController+CustomTransition.m */; };
+		8401DE8A20D90E03002B7E87 /* MyTransitionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401DE8920D90E03002B7E87 /* MyTransitionTool.m */; };
+		8401DE8D20D9FA68002B7E87 /* MyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401DE8C20D9FA68002B7E87 /* MyNavigationController.m */; };
+		8401DE9020D9FA82002B7E87 /* MyRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401DE8F20D9FA82002B7E87 /* MyRootViewController.m */; };
+		8401DE9920DA2F78002B7E87 /* HQPushAnimationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401DE9820DA2F78002B7E87 /* HQPushAnimationTransition.m */; };
 		84D3430020B79BE100C36802 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D342FF20B79BE100C36802 /* AppDelegate.m */; };
 		84D3430620B79BE100C36802 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D3430420B79BE100C36802 /* Main.storyboard */; };
 		84D3430820B79BE100C36802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D3430720B79BE100C36802 /* Assets.xcassets */; };
@@ -18,7 +26,6 @@
 		84D3433520B79C3000C36802 /* HQNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3433420B79C3000C36802 /* HQNavigationController.m */; };
 		84D3433820B79C5700C36802 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3433720B79C5700C36802 /* PushViewController.m */; };
 		84D3433B20B7A3D700C36802 /* HQNavigationControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3433A20B7A3D700C36802 /* HQNavigationControllerTransition.m */; };
-		84D3433E20B7A90000C36802 /* HQPushAnimationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3433D20B7A90000C36802 /* HQPushAnimationTransition.m */; };
 		84D3434120B7B34900C36802 /* NextViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3434020B7B34900C36802 /* NextViewControllerViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +47,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8401DE7C20D8F536002B7E87 /* MyFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyFirstViewController.h; sourceTree = "<group>"; };
+		8401DE7D20D8F536002B7E87 /* MyFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFirstViewController.m; sourceTree = "<group>"; };
+		8401DE7F20D8F541002B7E87 /* MySecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySecondViewController.h; sourceTree = "<group>"; };
+		8401DE8020D8F541002B7E87 /* MySecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySecondViewController.m; sourceTree = "<group>"; };
+		8401DE8220D8F54F002B7E87 /* MythirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MythirdViewController.h; sourceTree = "<group>"; };
+		8401DE8320D8F54F002B7E87 /* MythirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MythirdViewController.m; sourceTree = "<group>"; };
+		8401DE8520D8FC0C002B7E87 /* UIViewController+CustomTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CustomTransition.h"; sourceTree = "<group>"; };
+		8401DE8620D8FC0C002B7E87 /* UIViewController+CustomTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CustomTransition.m"; sourceTree = "<group>"; };
+		8401DE8820D90E03002B7E87 /* MyTransitionTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTransitionTool.h; sourceTree = "<group>"; };
+		8401DE8920D90E03002B7E87 /* MyTransitionTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTransitionTool.m; sourceTree = "<group>"; };
+		8401DE8B20D9FA68002B7E87 /* MyNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNavigationController.h; sourceTree = "<group>"; };
+		8401DE8C20D9FA68002B7E87 /* MyNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNavigationController.m; sourceTree = "<group>"; };
+		8401DE8E20D9FA82002B7E87 /* MyRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRootViewController.h; sourceTree = "<group>"; };
+		8401DE8F20D9FA82002B7E87 /* MyRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRootViewController.m; sourceTree = "<group>"; };
+		8401DE9720DA2F78002B7E87 /* HQPushAnimationTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQPushAnimationTransition.h; sourceTree = "<group>"; };
+		8401DE9820DA2F78002B7E87 /* HQPushAnimationTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQPushAnimationTransition.m; sourceTree = "<group>"; };
 		84D342FB20B79BE100C36802 /* HQPushPopTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HQPushPopTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D342FE20B79BE100C36802 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84D342FF20B79BE100C36802 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,8 +85,6 @@
 		84D3433720B79C5700C36802 /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 		84D3433920B7A3D700C36802 /* HQNavigationControllerTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQNavigationControllerTransition.h; sourceTree = "<group>"; };
 		84D3433A20B7A3D700C36802 /* HQNavigationControllerTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQNavigationControllerTransition.m; sourceTree = "<group>"; };
-		84D3433C20B7A90000C36802 /* HQPushAnimationTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQPushAnimationTransition.h; sourceTree = "<group>"; };
-		84D3433D20B7A90000C36802 /* HQPushAnimationTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQPushAnimationTransition.m; sourceTree = "<group>"; };
 		84D3433F20B7B34900C36802 /* NextViewControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewControllerViewController.h; sourceTree = "<group>"; };
 		84D3434020B7B34900C36802 /* NextViewControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewControllerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +114,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8401DE7B20D8F510002B7E87 /* systemNav */ = {
+			isa = PBXGroup;
+			children = (
+				8401DE9720DA2F78002B7E87 /* HQPushAnimationTransition.h */,
+				8401DE9820DA2F78002B7E87 /* HQPushAnimationTransition.m */,
+				8401DE8820D90E03002B7E87 /* MyTransitionTool.h */,
+				8401DE8920D90E03002B7E87 /* MyTransitionTool.m */,
+				8401DE8B20D9FA68002B7E87 /* MyNavigationController.h */,
+				8401DE8C20D9FA68002B7E87 /* MyNavigationController.m */,
+				8401DE8E20D9FA82002B7E87 /* MyRootViewController.h */,
+				8401DE8F20D9FA82002B7E87 /* MyRootViewController.m */,
+				8401DE8520D8FC0C002B7E87 /* UIViewController+CustomTransition.h */,
+				8401DE8620D8FC0C002B7E87 /* UIViewController+CustomTransition.m */,
+				8401DE7C20D8F536002B7E87 /* MyFirstViewController.h */,
+				8401DE7D20D8F536002B7E87 /* MyFirstViewController.m */,
+				8401DE7F20D8F541002B7E87 /* MySecondViewController.h */,
+				8401DE8020D8F541002B7E87 /* MySecondViewController.m */,
+				8401DE8220D8F54F002B7E87 /* MythirdViewController.h */,
+				8401DE8320D8F54F002B7E87 /* MythirdViewController.m */,
+			);
+			path = systemNav;
+			sourceTree = "<group>";
+		};
 		84D342F220B79BE100C36802 = {
 			isa = PBXGroup;
 			children = (
@@ -116,10 +160,9 @@
 		84D342FD20B79BE100C36802 /* HQPushPopTransition */ = {
 			isa = PBXGroup;
 			children = (
+				8401DE7B20D8F510002B7E87 /* systemNav */,
 				84D342FE20B79BE100C36802 /* AppDelegate.h */,
 				84D342FF20B79BE100C36802 /* AppDelegate.m */,
-				84D3433C20B7A90000C36802 /* HQPushAnimationTransition.h */,
-				84D3433D20B7A90000C36802 /* HQPushAnimationTransition.m */,
 				84D3433920B7A3D700C36802 /* HQNavigationControllerTransition.h */,
 				84D3433A20B7A3D700C36802 /* HQNavigationControllerTransition.m */,
 				84D3433320B79C3000C36802 /* HQNavigationController.h */,
@@ -130,8 +173,8 @@
 				84D3433720B79C5700C36802 /* PushViewController.m */,
 				84D3433F20B7B34900C36802 /* NextViewControllerViewController.h */,
 				84D3434020B7B34900C36802 /* NextViewControllerViewController.m */,
-				84D3430420B79BE100C36802 /* Main.storyboard */,
 				84D3430720B79BE100C36802 /* Assets.xcassets */,
+				84D3430420B79BE100C36802 /* Main.storyboard */,
 				84D3430920B79BE100C36802 /* LaunchScreen.storyboard */,
 				84D3430C20B79BE100C36802 /* Info.plist */,
 				84D3430D20B79BE100C36802 /* main.m */,
@@ -288,13 +331,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D3433520B79C3000C36802 /* HQNavigationController.m in Sources */,
+				8401DE8D20D9FA68002B7E87 /* MyNavigationController.m in Sources */,
+				8401DE8420D8F54F002B7E87 /* MythirdViewController.m in Sources */,
+				8401DE8A20D90E03002B7E87 /* MyTransitionTool.m in Sources */,
 				84D3433B20B7A3D700C36802 /* HQNavigationControllerTransition.m in Sources */,
+				8401DE8120D8F541002B7E87 /* MySecondViewController.m in Sources */,
 				84D3434120B7B34900C36802 /* NextViewControllerViewController.m in Sources */,
 				84D3433820B79C5700C36802 /* PushViewController.m in Sources */,
-				84D3433E20B7A90000C36802 /* HQPushAnimationTransition.m in Sources */,
+				8401DE7E20D8F536002B7E87 /* MyFirstViewController.m in Sources */,
+				8401DE9920DA2F78002B7E87 /* HQPushAnimationTransition.m in Sources */,
+				8401DE8720D8FC0C002B7E87 /* UIViewController+CustomTransition.m in Sources */,
 				84D3430E20B79BE100C36802 /* main.m in Sources */,
 				84D3433220B79BFE00C36802 /* RootViewController.m in Sources */,
 				84D3430020B79BE100C36802 /* AppDelegate.m in Sources */,
+				8401DE9020D9FA82002B7E87 /* MyRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,8 +514,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G2L3993CXH;
+				DEVELOPMENT_TEAM = 549J7TBH8S;
 				INFOPLIST_FILE = HQPushPopTransition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,8 +532,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G2L3993CXH;
+				DEVELOPMENT_TEAM = 549J7TBH8S;
 				INFOPLIST_FILE = HQPushPopTransition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

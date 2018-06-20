@@ -9,7 +9,7 @@
 #import "HQNavigationController.h"
 #import "HQNavigationControllerTransition.h"
 
-#define JPScreenW [UIScreen mainScreen].bounds.size.width
+#define KScreenW [UIScreen mainScreen].bounds.size.width
 
 @interface HQNavigationController () <UIGestureRecognizerDelegate>
 
@@ -56,8 +56,8 @@
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
         
         CGPoint translation = [gestureRecognizer velocityInView:gestureRecognizer.view];
-        if (translation.y < 0) {
-            //右——>左
+        if (translation.y < -150) {
+            //下——>上
             UIViewController *viewController = self.viewControllers.lastObject;
             if (!viewController) {
                 return;
@@ -69,8 +69,9 @@
                 
                 [self.navigationDelegate navigationControllerDidPush:self];
             }
-        }else {
+        }else if (translation.x > 0) {
             //左——>右
+            NSLog(@"左—--------------—>右");
         }
     }else if (gestureRecognizer.state == UIGestureRecognizerStateEnded || gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
         self.delegate = nil;
@@ -128,7 +129,7 @@
         
         // Forbid pop when the start point beyond user setted range for pop.
         CGPoint beginningLocation = [gestureRecognizer locationInView:gestureRecognizer.view];
-        if (JPScreenW >= 0 && beginningLocation.x > JPScreenW) {
+        if (KScreenW >= 0 && beginningLocation.x > KScreenW) {
             return NO;
         }
         else{

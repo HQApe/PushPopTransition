@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "HQNavigationController.h"
 #import "RootViewController.h"
+#import "MyNavigationController.h"
+#import "MyRootViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +22,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[HQNavigationController alloc] initWithRootViewController:[RootViewController new]];
+    
+    UITabBarController *rootVc = [[UITabBarController alloc] init];
+    [rootVc addChildViewController:[[HQNavigationController alloc] initWithRootViewController:[RootViewController new]]];
+    [rootVc addChildViewController:[[MyNavigationController alloc] initWithRootViewController:[MyRootViewController new]]];
+    self.window.rootViewController = rootVc;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

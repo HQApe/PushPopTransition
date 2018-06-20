@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class HQNavigationController;
-@protocol JPNavigationControllerDelegate <NSObject>
+@protocol HQNavigationControllerDelegate <NSObject>
 
 @optional
 
@@ -20,6 +20,6 @@
 
 @interface HQNavigationController : UINavigationController
 
-@property (weak, nonatomic) id<JPNavigationControllerDelegate> navigationDelegate;
+@property (weak, nonatomic) id<HQNavigationControllerDelegate> navigationDelegate;
 
 @end

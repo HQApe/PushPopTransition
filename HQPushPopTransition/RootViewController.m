@@ -9,7 +9,7 @@
 #import "RootViewController.h"
 #import "PushViewController.h"
 #import "HQNavigationController.h"
-@interface RootViewController ()<JPNavigationControllerDelegate>
+@interface RootViewController ()<HQNavigationControllerDelegate>
 
 @end
 
@@ -19,6 +19,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
     // Do any additional setup after loading the view.
+    self.title = @"Custom";
     
     UIButton *pushButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
     [pushButton setTitle:@"Push" forState:UIControlStateNormal];

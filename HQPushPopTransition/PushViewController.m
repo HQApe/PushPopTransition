@@ -9,8 +9,9 @@
 #import "PushViewController.h"
 
 #import "NextViewControllerViewController.h"
+#import "HQNavigationController.h"
 
-@interface PushViewController ()
+@interface PushViewController ()<HQNavigationControllerDelegate>
 
 @end
 
@@ -50,10 +51,14 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-
 - (void)popToView
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (BOOL)navigationControllerShouldStartPop:(HQNavigationController *)navigationController
+{
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
