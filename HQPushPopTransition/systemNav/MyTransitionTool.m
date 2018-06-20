@@ -33,9 +33,18 @@
 }
 
 - (void)registerPopGestureViewController:(UIViewController *)viewController {
-    [viewController.view addGestureRecognizer:self.panGesture];
-    viewController.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    _systemPopTarget = viewController.navigationController.interactivePopGestureRecognizer.delegate;
+    if ([viewController isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *targetVc = (UINavigationController *)viewController;
+        _navigationController = targetVc;
+        [targetVc.interactivePopGestureRecognizer.view addGestureRecognizer:self.panGesture];
+        targetVc.interactivePopGestureRecognizer.enabled = NO;
+        _systemPopTarget = targetVc.interactivePopGestureRecognizer.delegate;
+    }else {
+        _navigationController = viewController.navigationController;
+        [viewController.view addGestureRecognizer:self.panGesture];
+        _navigationController.interactivePopGestureRecognizer.enabled = NO;
+        _systemPopTarget = _navigationController.interactivePopGestureRecognizer.delegate;
+    }
 }
 
 
@@ -82,13 +91,16 @@
     if ((translation.y < 0 && translation.y < -fabs(translation.x))) {
         if ([self.pushDelegate respondsToSelector:@selector(transitionWillPushViewController)]) {
             [self addPushGestrueTarget:gestureRecognizer];
+            return YES;
         }
-        return YES;
     }else if (translation.x > 0 && translation.x > fabs(translation.y)) {
+        if (_navigationController.viewControllers.count == 1) {
+            return NO;
+        }
         if (_systemPopTarget) {
             [self addPopGestrueTarget:gestureRecognizer];
+            return YES;
         }
-        return YES;
     }
     return NO;
 }
@@ -121,7 +133,8 @@
     }
     else if (gestureRecognizer.state == UIGestureRecognizerStateEnded || gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
         
-        [self removeAllGestureTarget:gestureRecognizer];
+        [self removeAllGestureTarget:gestureRecognizer];//删除所有手势事件
+        
         if (fabs(progress) > 0.3) {//完成转场，交给navigationController的代理去置nil；
             [self.interactivePushTransition finishInteractiveTransition];
         }
@@ -134,9 +147,12 @@
 
 - (void)popGestureHandler:(UIPanGestureRecognizer *)gestureRecognizer {
     CGPoint translation = [gestureRecognizer velocityInView:gestureRecognizer.view];
-    if (translation.x > 0 && translation.x > fabs(translation.y)) {
-        SEL popSel = NSSelectorFromString(@"handleNavigationTransition:");
-        [gestureRecognizer addTarget:self.systemPopTarget action:popSel];
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        
+        if (translation.x > 0 && translation.x > fabs(translation.y)) {
+            SEL popSel = NSSelectorFromString(@"handleNavigationTransition:");
+            [gestureRecognizer addTarget:self.systemPopTarget action:popSel];
+        }
     }
 }
 
@@ -185,7 +201,6 @@
     if (_panGesture == nil) {
         _panGesture = [[UIPanGestureRecognizer alloc] init];
         _panGesture.maximumNumberOfTouches = 1;
-        [_panGesture addTarget:self action:@selector(pushGestureHandler:)];
         _panGesture.delegate = self;
     }
     return _panGesture;

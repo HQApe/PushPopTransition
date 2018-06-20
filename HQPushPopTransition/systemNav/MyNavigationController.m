@@ -7,6 +7,7 @@
 //
 
 #import "MyNavigationController.h"
+#import "MyTransitionTool.h"
 
 @interface MyNavigationController ()<UIGestureRecognizerDelegate>
 /**
@@ -15,6 +16,8 @@
 @property(nonatomic, weak) id systemPopTarget;
 
 @property (strong, nonatomic) UIPanGestureRecognizer *popGesture;
+
+@property (strong, nonatomic) MyTransitionTool *transition;
 
 @end
 
@@ -48,12 +51,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    if (![self.interactivePopGestureRecognizer.view.gestureRecognizers containsObject:self.popGesture]) {
-//        [self.interactivePopGestureRecognizer.view addGestureRecognizer:self.popGesture];
-//        self.interactivePopGestureRecognizer.enabled = NO;
-//        id target = self.interactivePopGestureRecognizer.delegate;
-//        [self.popGesture addTarget:target action:NSSelectorFromString(@"handleNavigationTransition:")];
-//    }
+    if (![self.interactivePopGestureRecognizer.view.gestureRecognizers containsObject:self.popGesture]) {
+        [self.interactivePopGestureRecognizer.view addGestureRecognizer:self.popGesture];
+        self.interactivePopGestureRecognizer.enabled = NO;
+        id target = self.interactivePopGestureRecognizer.delegate;
+        [self.popGesture addTarget:target action:NSSelectorFromString(@"handleNavigationTransition:")];
+    }
+    
+//    self.transition = [[MyTransitionTool alloc] init];
+//    [self.transition registerPopGestureViewController:self];
 }
 
 - (void)didReceiveMemoryWarning {

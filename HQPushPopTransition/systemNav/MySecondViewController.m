@@ -25,7 +25,7 @@
     self.transition = [[MyTransitionTool alloc] init];
     
     [self.transition registerPushGestureViewController:self];
-    [self.transition registerPopGestureViewController:self];
+//    [self.transition registerPopGestureViewController:self];
 }
 
 - (void)dealloc {
